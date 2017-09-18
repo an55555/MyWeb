@@ -1,0 +1,89 @@
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style: none;
+}
+
+img{
+    border: none;
+}
+
+.banner{
+    width:100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner_img{
+    overflow: hidden;
+    position: relative;
+    left: 0px;
+    z-index: 1;
+}
+.banner img{
+    width: 100%;
+    vertical-align: bottom;
+    display:none
+}
+.banner li{
+    float: left;
+}
+
+.bannerBtn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    opacity: 0.4;
+    filter: alpha(opacity:40);
+}
+.bannerPre{
+    left: 10px;
+    background: url("../images/banBtn.png") no-repeat -0px -0px;
+    background-size: 200%;
+}
+.bannerPre:hover{
+    opacity: 1;
+    filter: alpha(opacity:100);
+}
+.bannerNex{
+    right: 10px;
+    background: url("../images/banBtn.png") no-repeat -50px -0px;
+    background-size: 200%;
+}
+.bannerNex:hover{
+    opacity: 1;
+    filter: alpha(opacity:100);
+}
+.smallImg{
+    position: absolute;
+    bottom: 10px;
+    border-radius: 10px;
+    background-color:rgba(102,102,102,0.3);
+    z-index: 5;
+}
+.smallImg li{
+    width: 15px;
+    height: 15px;
+    background-color: #eeeeee;
+    border-radius: 8px;
+    float: left;
+    margin: 2px;
+}
+
+@media only screen and  (max-width: 768px) {
+    .bannerBtn{
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+    }
+    .bannerPre{
+        display: none;
+    }
+    .bannerNex{
+        display: none;
+    }
+}

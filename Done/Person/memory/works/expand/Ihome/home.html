@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script>
+        $(function(){
+            var start_x, start_y, end_x, end_y,homeBack_x,homeBack_y;
+            var client_height = $(window).height();//获取屏幕屏幕可视高度
+            var client_width=$(window).width();//获取屏幕屏幕可视宽度
+            $('.home').css('transform','translateX('+10+'px) translateY('+300+'px)');
+            $('.home').on('touchstart',function(e){
+                var homeStar_x=$('.home').position().left;//获取home键一开始的left
+                var homeStar_y=$('.home').position().top;//获取home键一开始的top
+                start_x = e.originalEvent.targetTouches[0].clientX;//获取触摸点下的时候，x坐标值
+                start_y = e.originalEvent.targetTouches[0].clientY;//获取触摸点下的时候，y坐标值
+                var dif_x=start_x-homeStar_x;//获取触摸点下的时候，x坐标值和home键的距离差
+                var dif_y=start_y-homeStar_y;//获取触摸点下的时候，y坐标值和home键的距离差
+                $('.home').on('touchmove',function(e){
+                    $('.home').css({'transition':'0s'});
+                    $('.home').css({'-webkit-transition':' 0s'});
+                    e.preventDefault();
+                    e.stopPropagation();
+                    end_x = e.originalEvent.targetTouches[0].clientX;
+                    end_y = e.originalEvent.targetTouches[0].clientY;
+                    $('.home').css('transform','translateX('+(end_x-dif_x)+'px) translateY('+(end_y-dif_y)+'px)');
+                });;
+            });
+            $('.home').on('touchend',function(e){
+                var homeEnd_x=$('.home').position().left;//放开手指时的home键的left值
+                var homeEnd_y=$('.home').position().top;//放开手指时的home键的top值
+                //放开手指时  规定home回的位置  停留在两侧
+                homeEnd_x<(client_width-$('.home').outerWidth(true))/2?homeBack_x=10:homeBack_x=client_width-10-$('.home').outerWidth(true);
+                if((homeEnd_y>80)&&(homeEnd_y<(client_height-60))){
+                    homeBack_y=homeEnd_y;
+                }else{
+                    if(homeEnd_y<=80){
+                        homeBack_y=80;
+                    }else{
+                        homeBack_y=client_height-60-$('.home').outerHeight(true);
+                    }
+                }
+                //让home键回去的 有过渡效果
+                $('.home').css({'transition':'1s'});
+                $('.home').css({'-webkit-transition':'1s'});
+                $('.home').css('transform','translateX('+homeBack_x+'px) translateY('+homeBack_y+'px)');
+
+            });
+            //点击home出现键菜单
+            var nowHome_x,nowHome_y//获取home键当前的位置
+            $('.home').click(function(e){
+                e.stopPropagation();
+                nowHome_x=$('.home').position().left;
+                nowHome_y=$('.home').position().top;
+                $('.homeMark').fadeIn(0);
+                $('.home').fadeOut(0);
+                $('.homeMark').animate({'top':nowHome_y,'left':nowHome_x},0,function(){
+                    $('.homeMark').animate({'width':client_width-40,'height':client_width-40,'top':(client_height-client_width-40)/2,'left':20});
+                });
+                $('.homeMark .top,.homeMark .bottom').css('left',(client_width-100)/2);
+                $('.homeMark .left,.homeMark .right').css('top',(client_width-100)/2);
+            });
+//            点击home菜单以外的地方  关闭home菜单
+            $('body').click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                if(e.target.className!='homeMark'){
+                    $('.homeMark').animate({'width':60,'height':60,'top':nowHome_y,'left':nowHome_x},
+                            function(){
+                                $('.home').fadeIn(0);
+                                $('.homeMark').fadeOut(0);
+                            });
+                };
+            });
+
+        });
+    </script>
+    <style>
+        body{
+            height: 2000px;
+            background: #2aabd2;
+        }
+        .home{
+            border: solid 1px #e0e0e0;
+            width:60px;
+            height:60px;
+            border-radius: 15px;
+            position: fixed;
+            color: red;
+            transform:translateX(0px) translateY(0px);
+            -webkit-transform: translateX(0px) translateY(0px);;
+            transition:0s;
+            left: 0px;
+            top: 0px;
+            background: url("./images/home_bg.png");
+            /*background-size: 120px;*/
+            background-position: -50px -50px;
+        }
+        .homeMark{
+            width:60px;
+            height:60px;
+            background:url("./images/mark_bg.png");
+            position: fixed;
+            border-radius: 15px;
+            display: none;
+            text-align: center;
+        }
+        .homeMark img{
+            width: 100%;
+        }
+        .homeMark h4{
+            padding: 0px;
+            border-radius: 5px;
+            height: 25px;
+            width: 50px;
+            margin:15px auto;
+            border-bottom: solid 1px #e0e0e0;
+            line-height: 25px;
+        }
+        .homeMark a{
+            color: #ffffff;
+        }
+        .homeMark .block{
+            width:60px;
+            height:60px;
+            border-radius: 15px;
+            position: absolute;
+            color: #ffffff;
+            letter-spacing: 0.1em;
+        }
+
+        .homeMark .top{
+            background: url("./images/home_bg.png");
+            background-size: 200px;
+            background-position: -120px -120px;
+            margin: 0 auto;
+            top: 20px;
+        }
+        .homeMark .left{
+            background: url("./images/home_bg.png");
+            background-size: 200px;
+            background-position: -120px -120px;
+            left: 20px;
+        }
+        .homeMark .right{
+            background: url("./images/home_bg.png");
+            background-size: 200px;
+            background-position: -120px -120px;
+            right: 20px;
+            top: 0px;
+        }
+        .homeMark .bottom{
+            background: url("./images/home_bg.png");
+            background-size: 200px;
+            background-position: -120px -120px;
+            bottom: 20px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="home">
+</div>
+
+<div class="homeMark">
+    <div class="block top"><h4>SHOW</h4></div>
+    <div class="block left"><h4>ADDR</h4></div>
+    <div class="block right"><h4>ABOUT</h4></div>
+    <div class="block bottom"><img src="./images/backHome.png"> </div>
+
+</div>
+
+
+</body>
+</html>

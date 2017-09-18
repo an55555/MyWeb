@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .center{
+            position: relative;
+            margin: 400px auto;
+            width: 100px;
+            height: 100px;
+        }
+        .center:before{
+            content: '';
+            position: absolute;
+            left: -180px;
+            top: -180px;
+            width: 360px;
+            height: 360px;
+            background: rgba(30,15,108,0.7);
+            border-radius: 90px;
+            animation: center2 30s infinite linear;
+            z-index: 2;
+        }
+        .center:after{
+            animation: center 20s infinite linear;
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+
+        }
+        .center .txtBox{
+            position: absolute;
+            z-index: 3;
+            border-radius: 90px;
+            width: 360px;
+            height: 360px;
+            background: rgba(30,15,108,0.7);
+            left: -180px;
+            top: -180px;
+        }
+        .center .txtBox :before{
+            content: '';
+            width: 100px;
+            height: 100px;
+
+        }
+        @keyframes center {
+            0%{
+                transform: rotate(0deg);
+                box-shadow:150px 0px 1px 100px rgba(200,20,3,0.7),
+                110px -110px 1px 100px rgba(200,3,200,0.7),
+                0px -150px 1px 100px rgba(100,3,200,0.7),
+                -110px -110px 1px 100px rgba(7,3,200,0.7),
+                -150px 0px 1px 100px rgba(3,100,200,0.7),
+                -110px 110px 1px 100px rgba(30,200,3,0.7),
+                0px 150px 1px 100px rgba(200,200,3,0.7),
+                110px 110px 1px 100px rgba(220,80,8,0.7);
+            }
+            50%{
+                transform: rotate(360deg);
+                box-shadow:150px 0px 1px 150px rgba(200,20,3,0.7),
+                110px -110px 1px 150px rgba(200,3,200,0.7),
+                0px -150px 1px 150px rgba(100,3,200,0.7),
+                -110px -110px 1px 150px rgba(7,3,200,0.7),
+                -150px 0px 1px 150px rgba(3,100,200,0.7),
+                -110px 110px 1px 150px rgba(30,200,3,0.7),
+                0px 150px 1px 150px rgba(200,200,3,0.7),
+                110px 110px 1px 150px rgba(220,80,8,0.7);
+            }
+            100%{
+                transform: rotate(0deg);
+                box-shadow:150px 0px 1px 100px rgba(200,20,3,0.7),
+                110px -110px 1px 100px rgba(200,3,200,0.7),
+                0px -150px 1px 100px rgba(100,3,200,0.7),
+                -110px -110px 1px 100px rgba(7,3,200,0.7),
+                -150px 0px 1px 100px rgba(3,100,200,0.7),
+                -110px 110px 1px 100px rgba(30,200,3,0.7),
+                0px 150px 1px 100px rgba(200,200,3,0.7),
+                110px 110px 1px 100px rgba(220,80,8,0.7);
+            }
+        }
+
+        @keyframes center2 {
+            from{
+                transform: rotate(0deg);
+
+            }
+            to{
+                transform: rotate(360deg);
+
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <div class="txtBox"></div>
+
+</div>
+
+</body>
+</html>

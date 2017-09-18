@@ -1,0 +1,13 @@
+pageOne£º1
+
+pageOne .top£º100
+
+ .pageOne .nav .menu li£º10
+
+ .pageOne .nav .scoBG£º9
+
+.banner_img £º1
+
+.smallImg£¨BANNERÐ¡°´Å¥£©£º10
+
+.bannerBtn £º2

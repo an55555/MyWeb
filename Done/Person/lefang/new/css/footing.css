@@ -1,0 +1,55 @@
+.footing{
+    width: 100%;
+    overflow: hidden;
+     background-color:#333333 ;
+    color: #ffffff;
+    font-size: 12px;
+}
+.footing img{
+    width: 120px;
+}
+.footing a{
+    color: #ffffff;
+}
+.footing h1{
+    padding: 1em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: solid #ffffff 1px;
+}
+.footing h1 small{
+    color: #9FCDF8;
+}
+.footing .footingCol{
+    margin-top: 1em;
+    float: left;
+    width: 33%;
+    overflow: hidden;
+}
+.footing span{
+    letter-spacing: 6px;
+}
+
+.footing h3{
+    font-weight: normal;
+    display: block;
+    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+}
+.footing h3 small{
+    color: #9FCDF8;
+}
+
+.footing p{
+    padding: 3px 20px 3px 20px;
+}
+ .bottom{
+      padding:1em 0;
+     border-top: solid 1px #ffffff;
+     color: #ffffff;
+    width: 100%;
+    text-align: center;
+     background-color:#333333 ;
+     text-align: center;
+}

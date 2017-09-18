@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    
+        .trunk,.trunk div{
+            width: 20px;
+            height: 200px;
+            background-color: #6facd5;
+            transform-origin: 50% 100%;
+            animation:wave 2s infinite ease-in-out ;
+            animation-direction:alternate;
+            position: absolute;
+            bottom: 100px;
+            left: 600px;
+        }
+        .trunk{
+        }
+        .trunk div{
+            left: 0px;
+            top:-100%;
+            animation:wave-leftBranch 1.7s infinite ease-in-out ;
+            animation-direction:alternate;
+        }
+        .trunk >div:nth-child(2)
+        , .trunk div>div:nth-child(2)
+        {
+            background-color: #ffff00;
+            animation: wave-rightBranch 2.4s infinite ease-in-out;
+            animation-direction:alternate;
+        }
+
+        @keyframes wave {
+            from{
+                transform: rotate(-10deg) scale(0.72);
+            }
+            to{
+                transform: rotate(10deg) scale(0.72);
+            }
+        }
+
+        @keyframes wave-leftBranch{
+            from{
+                transform: rotate(-25deg) scale(0.72);
+            }
+            to{
+                transform: rotate(-10deg) scale(0.72);
+            }
+        }
+
+        @keyframes wave-rightBranch{
+            from{
+                transform: rotate(20deg) scale(0.72);
+            }
+            to{
+                transform: rotate(40deg) scale(0.72);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="trunk">
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div> </div>
+                            <div> </div>
+                        </div>
+                        <div>
+                            <div> </div>
+                            <div> </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div> </div>
+                        <div> </div>
+                    </div>
+                </div>
+                <div>
+                    <div> </div>
+                    <div> </div>
+
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div> </div>
+                    <div> </div>
+                </div>
+                <div>
+                    <div> </div>
+                    <div> </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <div> </div>
+                    <div> </div>
+                </div>
+                <div>
+                    <div>
+                        <div> </div>
+                        <div> </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div> </div>
+                    <div> </div>
+                </div>
+                <div>
+                    <div>
+                        <div> </div>
+                        <div> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div>
+         <div>
+             <div>
+                 <div> </div>
+                 <div> </div>
+             </div>
+             <div>
+                 <div>
+                     <div>
+                         <div> </div>
+                         <div> </div>
+                     </div>
+                     <div>
+                         <div> </div>
+                         <div> </div>
+                     </div>
+                 </div>
+                 <div> </div>
+                 <div> </div>
+             </div>
+         </div>
+         <div>
+             <div>
+                 <div> </div>
+                 <div> </div>
+             </div>
+             <div>
+                 <div>
+                     <div> </div>
+                     <div> </div>
+
+                 </div>
+                 <div>
+                     <div></div>
+                     <div> </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+</div>
+
+</body>
+</html>

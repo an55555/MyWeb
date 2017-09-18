@@ -1,0 +1,438 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*公用部分*/
+
+/*初始化body,ul,li,a,img*/
+/*页面主体部分*/
+.pageOne,.pageTwo,.pageThree,.pageFour{
+    height: 700px;
+    overflow: hidden;
+}
+
+
+*{margin:0 auto;}
+
+
+h1{
+    letter-spacing: 0.3em;
+}
+
+
+body{
+	margin:0px;
+	padding:0px;
+	font-family:'微软雅黑';
+	font-size:14px;
+    line-height:1.7em;
+	background-color: #f1f1f1;
+    background: url("../images/body_bg.jpg");
+	}
+div{
+    /*border-radius: 6px;*/
+
+}
+.bodyBox{
+    overflow: hidden;
+}
+.mainBox{
+    width: 1000px;
+    margin:20px auto;
+}
+
+ul{
+	margin:0px;
+	padding:0px;
+
+	}
+
+li{
+	list-style:none;
+	float:left;
+
+	}
+a {
+	text-decoration:none;
+	color:#333;
+    cursor: pointer;
+	}
+
+/*去除图片的边框和外边距*/
+img{
+    border:0px ;
+    vertical-align: bottom;
+}
+
+/*标题*/
+.lit{
+    width: 100%;
+    text-indent: 1em;
+    height: 60px;
+    line-height: 60px;
+    letter-spacing: 3px;
+    position: relative;
+    background-color: #ffffff;
+    text-align: center;
+    color: #333333;
+}
+.lit h2{
+    font-weight: normal;
+}
+.lit h4{
+    float: left;
+    font-weight: normal;
+    font-size: 17px;
+    position: relative;
+    z-index: 1;
+}
+
+/*Map位置放置*/
+.lit span{
+    display: block;
+    font-size: 14px;
+    margin-right: 1em;
+    float: right;
+}
+.smalllit{
+    width: 98%;
+    text-indent: 1em;
+    height: 50px;
+    line-height: 50px;
+    letter-spacing: 3px;
+    position: relative;
+    background-color: #fbfbfb;
+    color: #333333;
+    text-align: center;
+    -moz-box-shadow:0px 0px 10px #666666; -webkit-box-shadow:0px 0px 4px #666666; box-shadow:0px 0px 4px #666666;
+}
+.smalllit h3{
+    font-weight: normal;
+}
+.smalllit h4{
+    border: solid 1px red;
+    text-align: right;
+    font-weight: normal;
+    font-size: 17px;
+    position: relative;
+    z-index: 1;
+}
+.smalllit span{
+    display: block;
+    font-size: 14px;
+    margin-right: 1em;
+    float: right;
+}
+.lit_v{
+    position: absolute;
+    background: url("../images/litlit.png");
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+/*Map位置放置*/
+.smalllit span{
+    display: block;
+    font-size: 14px;
+    margin-right: 1em;
+    float: right;
+}
+/*放分享与顶踩等大内容的地方*/
+.bigBox{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/*文字列表部分*/
+.list{
+    border-top: solid 1px #e7e3e3;
+	width: 98%;
+	margin: 0 auto;
+	overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 4px;
+    background-color: #ffffff;
+    -moz-box-shadow:0px 0px 10px #666666; -webkit-box-shadow:0px 0px 4px #666666; box-shadow:0px 0px 4px #666666;
+}
+
+.list li{
+	width:100%;
+	min-height: 40px;
+	height: auto !important;
+	line-height: 40px;
+	clear: both;
+
+}
+.list li p{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.list li a{
+    float: left;
+}
+.list p span{
+    float: right;
+    margin-left: 1em;
+}
+
+/*图片列表部分*/
+
+.imgList{
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+.imgList li{
+    margin: 15px 0;
+    width: 25%;
+}
+.imgList li img{
+    width: 95%;
+}
+.imgList li h3{
+    margin-top: 10px;
+    font-weight: normal;
+ /*文字起出部分，变成。。。*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*图文内容部分*/
+.content{
+    width: 98%;
+    overflow: hidden;
+    text-indent: 2em;
+    background-color: #ffffff;
+    -moz-box-shadow:0px 0px 10px #666666; -webkit-box-shadow:0px 0px 4px #666666; box-shadow:0px 0px 4px #666666;
+}
+.content h2{
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+}
+.content h4{
+    text-align: center;
+    font-weight:normal
+}
+.content p{
+    margin: 1em;
+    overflow:hidden;
+}
+.content img{
+    float: left;
+    width: 200px;
+    margin-right: 2em;
+}
+
+/*左右布局*/
+.left{
+    overflow: hidden;
+    float: left;
+    width: 300px;
+
+}
+.left .leftBot{
+    text-align: center;
+    margin-top: 50px;
+    /*background-color: #ffffff;*/
+    width: 98%;
+    height: 200px;
+
+}
+.leftBot h4{
+    text-align: left;
+    font-weight: normal;
+    margin: 2em;
+}
+.leftBot img{
+    width: 90%;
+}
+.right{
+    overflow: hidden;
+    float: right;
+    width: 650px;
+    padding-bottom: 4px;
+}
+
+
+/*测试*/
+.borderr{
+    border: solid 1px #ff0000;
+}
+
+
+/*清除浮动*/
+.clearFlo{
+    clear: both;
+}
+.txtCenter{
+    text-indent: 0;
+    text-align: center;
+}
+.txtCenter h4{
+    text-align: center;
+    float: none;
+
+}
+
+
+
+/*效果*/
+.shadow{
+    -webkit-box-shadow:5px 3px  15px rgba(95,93,93,0.8),
+    -8px 3px  20px rgba(95,93,93,0.8) inset;
+    -moz-box-shadow:5px 3px  15px rgba(95,93,93,0.8),
+    -8px 3px  20px rgba(95,93,93,0.8) inset;
+    box-shadow: 5px 3px  15px rgba(95,93,93,0.8),
+    -8px 3px  20px rgba(95,93,93,0.8) inset;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=5);/*for ie6,7,8*/
+}
+
+.radius{
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius: 10px;
+}
+
+.rad_sha{
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius: 10px;
+    -webkit-box-shadow:5px 3px  15px rgba(95,93,93,0.8),
+    -8px 3px  20px rgba(95,93,93,0.8) inset;
+    -moz-box-shadow:5px 3px  15px rgba(95,93,93,0.8),
+    -8px 3px  20px rgba(95,93,93,0.8) inset;
+    box-shadow: 5px 3px  15px rgba(95,93,93,0.8),
+    -8px 3px  20px rgba(95,93,93,0.8) inset;
+}
+
+/*图片展示*/
+.imgContainer{
+    position: relative;
+    width: 1100px;
+    overflow: hidden;
+}
+.imgContainer .box{
+    margin-bottom: 30px;
+    width: 25%;
+    float: left;
+    position: relative;
+    color: #666666;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+.inbox{
+    box-shadow: 1px 1px 10px 1px #999999;
+    margin:0 auto;
+    width: 93%;
+    background-color: #FFFFFF;
+    border-radius:30px;
+    /*overflow: hidden;*/
+}
+.imgContainer .inbox .imgBox{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.box img{
+    border-radius:5px;
+    width: 100%;
+}
+.box p{
+    padding:0 1em  0em 1em;
+}
+.box span{
+    display: block;
+    border-top: solid 1px #eeeeee;
+    background-color: #f7f7f7;
+    padding:1em;
+}
+
+/*子页*/
+.container{
+    position: relative;
+    width: 1250px;
+    margin:20px auto;
+}
+.container .box{
+    width: 20%;
+    float: left;
+    position: relative;
+    color: #666666;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+}
+
+.seoContent{
+    background-color: #ffffff;
+    width: 98%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    -moz-box-shadow:0px 0px 10px #666666; -webkit-box-shadow:0px 0px 4px #666666; box-shadow:0px 0px 4px #666666;
+}
+.seoContent h1{
+    margin: 30px;
+    color: #3e6790;
+    text-align: center;
+}
+.seoContent h1 small{
+
+}
+.seoContent h4{
+    margin: 30px 30px 10px 30px;
+    color: #333333;
+    font-size: 15px;
+}
+.seoContent p{
+    margin: 10px 30px 20px 30px;
+    color: #666666;
+}
+
+/*弹出层*/
+.markFLO{
+    position: fixed;
+    width: 800px;
+    background: url("../images/markBg.png");
+    overflow-y: scroll;
+    top: 0px;
+    left: 0px;
+    margin: 0 auto;
+    z-index: 150;
+    text-align: center;
+    display: none;
+    height: 100%;
+}
+.markFLO h1{
+    font-size: 18px;
+    width: 800px;
+    overflow: hidden;
+    padding: 20px 0px;
+    margin: 20px auto;
+    font-weight: normal;
+    background-color: #ffffff;
+    border: solid 1px #EEEEEE;
+}
+.markFLO .markImg{
+    border: solid 1px #EEEEEE;
+    width: 800px;
+    margin: 20px auto;
+}
+
+.markFLO .markImg img{
+    width: 100%;
+}
+.markFLO .closeMark{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    top: 10px;
+    background-color: #000088;
+}

@@ -1,0 +1,213 @@
+body{
+    overflow:hidden;
+    background:
+    #FFFFFF
+    url("../images/cloud.png")
+    no-repeat;
+    background-position-x: center;
+    font-family: '微软雅黑';
+}
+img{
+    vertical-align: bottom;
+}
+
+.deerBox{
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    margin-left:-220px;
+    width: 400px;
+    height: 400px;
+    background:
+    url("../images/deer/deer.png")
+    no-repeat
+    0% 0%/100% 100%;
+}
+.deerBox img{
+    width: 100%;
+}
+.deerBox div{
+    z-index: 2;
+    position: absolute;
+
+}
+.deerBox .ear{
+    z-index: 4;
+    position: absolute;
+    width: 40px;
+    top:32%;
+    left: 15%;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+}
+
+
+.trunk{
+    width: 54px;
+    height: 115px;
+    transform-origin: 50% 100%;
+    bottom: 230px;
+    left: 54px;
+    -webkit-animation:wave 2.4s infinite ease-in-out ;
+    animation:wave 2.4s infinite ease-in-out ;
+    -webkit-animation-direction:alternate ;
+    animation-direction:alternate;
+}
+.trunk_le{
+    width: 54px;
+    height: 115px;
+    transform-origin: 50% 100%;
+    bottom: 230px;
+    left: 54px;
+    -webkit-animation:wave2 2.4s infinite ease-in-out ;
+    animation:wave2 2.4s infinite ease-in-out ;
+    -webkit-animation-direction:alternate ;
+    animation-direction:alternate;
+    z-index: 1;
+}
+.deerBox .trunk2{
+    bottom: 60px;
+    left: 39px;
+    width: 160px;
+    height: 90px;
+    -webkit-animation:wave 3.5s infinite ease-in-out ;
+    animation:wave 3.5s infinite ease-in-out ;
+    -webkit-animation-direction:alternate ;
+    animation-direction:alternate;
+    transform-origin: 0% 100%;
+    -webkit-transform-origin:0% 100% ;
+}
+.deerBox .trunk3{
+    bottom: 108px;
+    left: 6px;
+    width: 277px;
+    height: 130px;
+    animation:wave-leftBranch 3s infinite ease-in-out ;
+    -webkit-animation:wave-leftBranch 3s infinite ease-in-out ;
+    animation-direction:alternate;
+    -webkit-animation-direction:alternate ;
+    transform-origin:15% 85%;
+    -webkit-transform-origin:15% 85% ;
+}
+.deerBox .trunk4{
+    bottom: 93%;
+    left:68%;
+    width: 172px;
+    height: 163px;
+    -webkit-animation:wave-leftBranch 2.4s infinite ease-in-out ;
+    animation:wave-leftBranch 2.4s infinite ease-in-out ;
+    -webkit-animation-direction:alternate ;
+    animation-direction:alternate;
+    transform-origin:40% 100%;
+    -webkit-transform-origin:40% 100% ;
+}
+.deerBox .trunk5{
+    bottom: 85%;
+    left: 95%;
+    width: 172px;
+    height: 112px;
+    -webkit-animation:wave 3s infinite ease-in-out ;
+    animation:wave 3s infinite ease-in-out ;
+    animation-direction:alternate;
+    -webkit-animation-direction:alternate ;
+    transform-origin:5% 95%;
+    -webkit-transform-origin:5% 95% ;
+}
+.deerBox .trunk6{
+    bottom: 60%;
+    left: 30%;
+    width: 175px;
+    height: 170px;
+    -webkit-animation:wave-leftBranch 2.4s infinite ease-in-out ;
+    animation:wave-leftBranch 2.4s infinite ease-in-out ;
+    animation-direction:alternate;
+    -webkit-animation-direction:alternate ;
+    transform-origin:30% 100%;
+    -webkit-transform-origin:30% 100% ;
+}
+.deerBox .trunk7{
+    bottom:-52%;
+    left: -55%;
+    width: 100px;
+    height: 125px;
+    transform-origin:100% 0%;
+    -webkit-transform-origin:100% 0% ;
+    -webkit-animation:trunk7 3s infinite ease-in-out ;
+    animation:trunk7 3s infinite ease-in-out ;
+    -webkit-animation-direction:alternate ;
+    animation-direction:alternate;
+}
+
+@keyframes wave {
+    from{
+        -webkit-transform:rotate(-5deg) scale(0.9);
+    }
+    to{
+        -webkit-transform: rotate(5deg)  scale(0.9);
+    }
+}
+
+@-webkit-keyframes  wave {
+    from{
+        -webkit-transform:rotate(-5deg);
+    }
+    to{
+        webkit-transform:rotate(5deg);
+    }
+}
+
+
+@keyframes wave2 {
+    from{
+       transform:rotate(15deg) scale(1);
+    }
+    to{
+      transform: rotate(20deg) scale(1);
+    }
+}
+
+@-webkit-keyframes  wave2 {
+    from{
+        -webkit-transform:rotate(15deg) scale(1);
+    }
+    to{
+        webkit-transform:rotate(20deg) scale(1);
+    }
+}
+
+@keyframes wave-leftBranch{
+    from{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes wave-leftBranch{
+    from{
+        webkit-transform: rotate(-10deg);
+    }
+    to{
+        webkit-transform: rotate(0deg);
+    }
+}
+
+
+
+
+@keyframes trunk7{
+    from{
+        transform: rotate(15deg) scale(0.9);
+    }
+    to{
+        transform: rotate(30deg) scale(1);
+    }
+}
+@-webkit-keyframes trunk7{
+    from{
+        webkit-transform:rotate(15deg) scale(0.9);
+    }
+    to{
+        webkit-transform: rotate(30deg) scale(1);
+    }
+}

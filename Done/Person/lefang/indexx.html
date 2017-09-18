@@ -1,0 +1,462 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="./new/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="./new/icon/iconfont.css" rel="stylesheet" type="text/css">
+    <link href="./new/css/allOver.css" type="text/css" rel="stylesheet">
+    <link href="./new/css/footing.css" type="text/css" rel="stylesheet">
+    <link href="./new/css/heading.css" type="text/css" rel="stylesheet">
+    <link href="./new/css/bodyContent.css" type="text/css" rel="stylesheet">
+    <script src="./new/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="./new/js/overAll.js" type="text/javascript"></script>
+    <script src="./new/js/index.js" type="text/javascript"></script>
+    <script src="./new/js/wow.min.js" type="text/javascript"></script>
+    <!--[if lt IE 10]>
+    <script src="./new/js/PIE.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <script>
+        if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+            new WOW().init();
+        };
+        $(function(){
+            if (window.PIE) {
+                $('.rounded').each(function() {
+                    PIE.attach(this);
+                });
+            }
+        });
+
+        //滚动条部分
+        $(window).scroll(function(){
+            $(window).scrollTop()==0?$('.top').css('top',20):$('.top').css('top',0)
+        });
+    </script>
+    <style>
+       .ele,.anliBan{
+            behavior: url(./new/js/PIE.htc);
+        }
+        /*主面轮播部分*/
+
+       .banner{
+           top: -60px;
+           width:100%;
+           position: relative;
+       }
+
+       .banner_img{
+           position: relative;
+           left: 0px;
+           z-index: 1;
+       }
+       .banner_img li{
+           height: 420px;
+       }
+       .banner img{
+           vertical-align: bottom;
+       }
+       .banner li{
+           position: relative;
+           float: left;
+           box-sizing: border-box;
+       }
+       .banner:hover .bannerBtn{
+           display: block;
+       }
+       .bannerBtn{
+           width: 100px;
+           height: 100px;
+           position: absolute;
+           top: 150px;
+           z-index: 2;
+           display: none;
+           opacity: 0.6;
+           filter: alpha(opacity:60);
+       }
+       .bannerPre{
+           left: 10px;
+           background: url("./new/images/banner/banBtn2.png") no-repeat -0px -0px;
+           background-size: 200%;
+       }
+       .bannerPre:hover{
+           opacity: 1;
+           filter: alpha(opacity:100);
+       }
+       .bannerNex{
+           right: 10px;
+           background: url("./new/images/banner/banBtn2.png") no-repeat -100px -0px;
+           background-size: 200%;
+       }
+       .bannerNex:hover{
+           opacity: 1;
+           filter: alpha(opacity:100);
+       }
+       .smallImg{
+           position: absolute;
+           bottom: 10px;
+           border-radius: 10px;
+           /*background-color:rgba(102,102,102,0.3);*/
+           z-index: 10;
+       }
+       .smallImg li{
+           width: 40px;
+           height: 40px;
+           /*background-color: #eeeeee;*/
+           border-radius: 8px;
+           background-image: url("./new/images/banner/smallLi2.png");;
+           /*background: url("../new/images/banner/smallLi2.png");*/
+           background-repeat: no-repeat;
+           background-position: 100%;
+           float: left;
+           margin: 10px;
+
+       }
+    </style>
+
+</head>
+<body>
+<!--顶部部分-->
+<div class="top">
+    <div class="topLeft">
+        &nbsp; &nbsp; &nbsp; &nbsp;<i class="iconfont" >&#xe652;</i>&nbsp; 0592-3118118
+        <i class="iconfont" style="margin-left: 2em">&#xf01c7;</i>&nbsp;1609846998
+        <i class="iconfont" style="margin-left: 2em">&#xe68a;</i>&nbsp;1609846998@qq.com
+    </div>
+    <div class="topRight">
+        <a href="#" class="login">登录</a>
+        <a href="#" id="DrowA" style="position: relative">资讯<i style="font-size: 14px;margin-left: 0.6em" class="iconfont">&#xe633;</i>
+            <ul class="liDrow"><li>公司动态</li><li>行内新闻</li><li>招聘信息</li></ul>
+        </a>
+        <a href="#">关于我们</a> &nbsp;<a href="#">公司活动</a>
+    </div>
+</div>
+<!--第一屏-->
+<div class="pageOne" id="pageOne">
+    <h1 style="text-align: center;font-size: 50px;letter-spacing: 0.7em;margin-top: 80px;height: 120px"><img style="width: 400px" src="./new/images/banner/lefang4.png"><br>
+        <small style=" letter-spacing: 4px;font-size: 30px;color: #666666">&nbsp;www.lefang360.com</small></h1>
+    <div class="nav">
+        <ul class="menu">
+            <div class="scoBG"></div>
+            <li><a href="#"> 首页</a></li>
+            <li><a href="#">SEO烦恼</a></li>
+            <li><a href="#">趋势</a></li>
+            <li><a href="#">案例</a></li>
+            <li><a href="#">公司文化</a></li>
+        </ul>
+    </div>
+    <div class="banner" style="width: 100%;height: 420px;">
+        <ul class="banner_img">
+            <li class="bannerOneLi">
+                <img src="./new/images/banner/seo.png" style="margin-top:130px;width: 300px">
+                <div class="imgBorder">
+                    <img src="./new/images/banner/search.png" style="width: 800px;margin-top: 20px;opacity: 0">
+                </div>
+            </li>
+            <li class="bannerTwoLi">
+                <h1>
+                    <img src="./new/images/banner/PCtext.png" style="width:300px;height: 130px">
+                    <!--PC端+移动端<br><br><br>双管齐下-->
+                </h1>
+                <img src="./new/images/banner/PC3.png" style="top:30px;left:70px">
+                <img id="twoImg" src="./new/images/banner/PHONE.png" style="top: 80px;left: 10px;opacity: 0">
+            </li>
+            <li class="bannerThreeLi">
+                <div class="text">
+                    <h2>直达百度首页</h2>
+                    <br>
+                    <p>
+                        合作双方出现分歧
+                        客户要求延长服务时间
+                        按照包年收费，客户在面对网站排名上去的情况下往往要求进行优化的网络公司要延长服务时间，直到关键词排名上线。
+                        优化公司收费困难
+                        由于上述问题的存在，容易导致客户忽略公司的优化努力，从而导致公司尾款收不回来，客户二次续费的难度也大幅增加。
+                        合作利益双方受损
+                        优化效果不明显，客户白花钱
+                    </p>
+                </div>
+
+                <img src="./new/images/banner/IDEA.png" style="width: 800px;position: absolute;right: 0px">
+            </li>
+            <li class="bannerFourLi">
+                <img src="./new/images/banner/12.png" style="width: 450px;position: absolute;right: 0px;top: -150px">
+                <img id="bannerFourLiImg1" src="./new/images/banner/san.png"  style="width: 400px;position: absolute;top: 100px;left: -400px;opacity: 0;filter: alpha(opacity:0);" >
+                <img id="bannerFourLiImg2" src="./new/images/banner/san2.png"  style="width: 250px;position: absolute;top: 100px;left: -400px;opacity: 0;filter: alpha(opacity:0);" >
+            </li>
+        </ul>
+
+        <ul class="smallImg">
+        </ul>
+        <div class="bannerBtn bannerPre"></div>
+        <div class="bannerBtn bannerNex"></div>
+    </div>
+</div>
+<!--第二页开始-->
+<div class="bodyContent">
+<!--第二屏-->
+    <div class="pageTwo" id="pageTwo">
+        <h1 style="margin: 90px auto;font-size: 35px">为什么选择乐方</h1>
+            <div class="pageTwoOne wow bounceInUp" data-wow-duration="1.5s">
+                <img src="./new/images/banner/user.png">
+                <h3>专业的团队</h3>
+                <p>
+                    他们的青春拒绝冰冷的揣测，
+                    他们不是群体发声的途径，
+                    他们将过去、未来视作幻影，
+                    狂喜只在这一刻，这完整的刹那，
+                    如何破坏迷宫法则，摆脱恐惧，
+                    在时间的片段，飞矢不动；
+                    我们亦不能两次踏入同一条河流，
+                    如果永恒，你将与什么样的自己同行，
+                    这是一场围墙上的舞蹈，乐方。
+
+                </p>
+            </div>
+            <div class="pageTwoTwo wow bounceInUp"  data-wow-duration="1.5s" data-wow-delay="0.3s">
+                <img src="./new/images/banner/onlin.png">
+                <h3>按上线收费</h3>
+                <p>
+                    有上线就收费，无上线不多收一分一毫。真真正正的100%利用率，让你的每一分钱都花的有价值！
+                    他们的青春拒绝冰冷的揣测，
+                    他们不是群体发声的途径，
+                    他们将过去、未来视作幻影，
+                    狂喜只在这一刻，这完整的刹那，
+                    如何破坏迷宫法则，摆脱恐惧，
+                    在时间的片段，飞矢不动；
+                    我们亦不能两次踏入同一条河流，
+                    如果永恒，你将与什么样的自己同行，
+                    这是一场围墙上的舞蹈，非池中。
+                </p>
+            </div>
+            <div class="pageTwoThree wow bounceInUp"  data-wow-duration="1.5s" data-wow-delay="0.6s">
+                <img src="./new/images/banner/online.png"><h3>多网覆盖</h3>
+                <p>
+                    百度、360、搜狗点击率绝对性的高！在三大网站上线
+                    他们的青春拒绝冰冷的揣测，
+                    他们不是群体发声的途径，
+                    他们将过去、未来视作幻影，
+                    狂喜只在这一刻，这完整的刹那，
+                    如何破坏迷宫法则，摆脱恐惧，
+                    在时间的片段，飞矢不动；
+                    我们亦不能两次踏入同一条河流，
+                    如果永恒，你将与什么样的自己同行，
+                    这是一场围墙上的舞蹈，非池中。
+                </p>
+            </div>
+    </div>
+
+<!--第三屏-->
+    <div class="pageThree" id="pageThree">
+        <div class="outRadio">
+            <div class="inRadio wow bounceIn" data-wow-duration="1s">
+                <img src="./new/images/fuwu.png" style="position: absolute;top: 0px;left: 0px;width: 100%">
+                <div class="ele element1 wow pageThreeAnimate" data-wow-duration="2s" data-wow-delay="0.1s"><a id="eleDEG1">解决<div class="eleText">乐方帮您解决</div> </a> </div>
+                <div class="ele element2 wow pageThreeAnimate2" data-wow-duration="2s" data-wow-delay="0.1s"> <a  id="eleDEG2">APP<div class="eleText">乐方App</div></a> </div>
+                <div class="ele element3 wow pageThreeAnimate3" data-wow-duration="2s" data-wow-delay="0.1s">  <a>趋势</a><div class="eleText">乐方细说趋势</div></div>
+                <div class="ele element4 wow pageThreeAnimate4" data-wow-duration="2s" data-wow-delay="0.1s"> <a>烦恼 </a><div class="eleText">乐方帮你解决烦恼</div></div>
+            </div>
+        </div>
+    </div>
+
+<!--第四屏-->
+    <div class="pageFour" id="pageFour">
+        <img src="./new/images/banner/PHONE.png" style="margin-top: 200px">
+        <span  class="onePhone wow pagFourAnimate " data-wow-duration="1.5s">
+            <h3>一键拨号</h3><img src="./new/images/banner/3phone.png">
+        </span>
+         <span class="oneQQ wow pagFourAnimate2" data-wow-duration="1.5s">
+             <img src="./new/images/banner/3QQ.png"><h3>一键QQ资讯</h3>
+        </span>
+         <span  class="oneNav wow pagFourAnimate3" data-wow-duration="1.5s">
+            <img src="./new/images/banner/3naga.png"><h3>一键地图导航</h3>
+        </span>
+    </div>
+
+    <!--第五屏-->
+    <div class="pageFive" id="pageFive">
+        <div class="anliBan">
+            <img src="./new/images/banner/anliban.png" style="height: 120px;position: absolute;right: 10px;top: 10px">
+            <p><span style="color: #456f9a">个性定制网站  为您生易锦上添花</span> &nbsp;&nbsp;||&nbsp;&nbsp;Customize the site for you is the icing on the cake</p>
+            <h3><a>查看更多</a></h3>
+        </div>
+        <div class="imgContainer">
+            <div class="box">
+                <div class="inbox">
+                    <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span><a>在日历lksj中是地中中要昌在中晨困时工</a></span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inbox">
+                     <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span>在日历lksj中是地中中要昌在中晨困时工</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inbox">
+                     <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span>在日历lksj中是地中中要昌在中晨困时工</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inbox">
+                     <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span>在日历lksj中是地中中要昌在中晨困时工</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inbox">
+                     <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span>在日历lksj中是地中中要昌在中晨困时工</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inbox">
+                     <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span>在日历lksj中是地中中要昌在中晨困时工</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inbox">
+                     <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span>在日历lksj中是地中中要昌在中晨困时工</span>
+                </div>
+            </div>
+            <div class="box">
+                <div class="inbox">
+                     <div class="imgBox"> <img src="./new/images/banner/1.jpg"></div>
+                    <p>在日历lksj中是地中中要昌在中晨困时工</p>
+                    <span>在日历lksj中是地中中要昌在中晨困时工</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--第六屏-->
+    <div class="pageSix" id="pageSix">
+        <div style="width: 1100px;margin: 0 auto;overflow: hidden">
+            <div class="anliBan">
+              <h3>了 解 乐 方 <br><small>Understand LEFANG</small></h3>
+            </div>
+            <div class="pageSixCol">
+                        <div class="pageSixbox">
+                            <div class="pageSixinbox">
+                                <div class="pageSixLit"><a href="#">
+                                    <img src="./new/images/lfnews.png"><h3>乐方动态&nbsp;&nbsp;<br>
+                                    <small>LeFang Dynamic</small>&nbsp;&nbsp;</h3></a>
+                                </div>
+                                <ul class="list" style="width: 100%">
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+            <div class="pageSixCol">
+                        <div class="pageSixbox">
+                            <div class="pageSixinbox">
+                                <div class="pageSixLit"><a>
+                                    <img src="./new/images/lfactivity.png"><h3>乐方活动&nbsp;&nbsp;<br>
+                                    <small>LeFang Activity</small>&nbsp;&nbsp;</h3></a>
+                                </div>
+                                <ul class="list" style="width: 100%">
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            <div class="pageSixCol">
+                  <div class="pageSixbox">
+                    <div class="pageSixinbox">
+                                <div class="pageSixLit"><a>
+                                    <img src="./new/images/lerecruit.png"><h3>乐方招聘&nbsp;&nbsp;<br>
+                                    <small>LeFang Recrut</small>&nbsp;&nbsp;</h3></a>
+                                </div>
+                                <ul class="list" style="width: 100%">
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                    <li><p><a>第更重要的新闻资讯</a><span>13414</span></p></li>
+                                </ul>
+                            </div>
+             </div>
+            </div>
+      </div>
+        <p id="toTop" style="width: 100%;text-align: center;margin:40px auto"><a><i class="iconfont">&#xe6a0;</i> <br>返回顶部</a></p>
+    </div>
+
+
+
+    <!--脚部-->
+    <div class="footing">
+        <h1>Conveni<small>ent</small> chann<small>el</small></h1>
+        <div class="footingCol" style="width: 30%;margin-left:3%">
+            <h3>快速返问/<small>Quick access</small></h3>
+            <p><i class="iconfont" style="color: #9FCDF8;font-size: 15px;margin-right: 0.5em">&#xe76a;</i><a>关于我们</a></p>
+            <p><i class="iconfont" style="color: #9FCDF8;font-size: 15px;margin-right: 0.5em">&#xe76a;</i><a>优秀案例</a></p>
+            <p><i class="iconfont" style="color: #9FCDF8;font-size: 15px;margin-right: 0.5em">&#xe76a;</i><a>汇款方式</a></p>
+            <p><i class="iconfont" style="color: #9FCDF8;font-size: 15px;margin-right: 0.5em">&#xe76a;</i><a>最新招聘</a></p>
+            <p><i class="iconfont" style="color: #9FCDF8;font-size: 15px;margin-right: 0.5em">&#xe76a;</i><a>最新动态</a></p>
+
+        </div>
+        <div class="footingCol">
+            <h3>联系我们/<small>Contact information</small> </h3>
+            <p>商务QQ：1609846998</p>
+            <p>联系电话：0592-3118118</p>
+            <p>邮箱：1609846998@qq.com</p>
+            <p>总公司地址：厦门思明软件园二期观日路22号303室</p>
+            <p>分公司地址：厦门市思明区会展南二里51号2303室</p>
+            <h3>
+                <p><div class="bshare-custom icon-medium"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script></p>
+            </h3>
+        </div>
+        <div class="footingCol" style="text-align: center">
+            <h3 style="text-align: left">下载/关注/<small>Download / focus</small> </h3>
+            <div style="width: 50%;float: left">
+                <span>乐方APP(安卓)</span><br>
+                <img src="./new/images/anzhuoerweima.png"><br>
+                (请用浏览器扫描下载)<br>
+            </div>
+            <div style="width: 50%;float: left">
+                <span>关注微信公众号</span><br>
+                <img src="./new/images/weixingong.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        版权所有 乐方网络      技术支持：乐方网络  51.La 网站流量统计系统     备案号   闽ICP备12019988号-1<br>
+        友情链接：
+    </div>
+</div>
+
+
+<!--弹出层部分-->
+<div class="markFLO">
+    <div class="closeMark"></div>
+    <h1></h1>
+    <div class="markImg"></div>
+</div>
+
+</body>
+</html>
