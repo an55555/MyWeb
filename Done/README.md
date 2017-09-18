@@ -1,8 +1,8 @@
 #### 一线考察项目
 
-**Vue开发**
+**负责内容：前端页面实现、前端页面设计、数据处理**
 
-![Alt text](https://github.com/an55555/MyWeb/blob/master/Done/Office/imges/pms/1.png?raw=true)
+**技术栈：Vue+Webpack**
 
 ![一线才考察项目](https://github.com/an55555/MyWeb/blob/master/Done/Office/imges/pms/1.png?raw=true)
 
