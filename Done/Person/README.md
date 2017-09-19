@@ -2,13 +2,13 @@
 
 总结：花里胡哨...  不过还是满满的回忆. 
 
-[江左梅狼!哈哈](https://github.com/an55555/MyWeb/blob/master/Done/Person/images/deer.gif?raw=true)
+![江左梅狼!哈哈](https://github.com/an55555/MyWeb/blob/master/Done/Person/images/deer.gif?raw=true)
 
 1. [个人网站首页](https://an55555.github.io/MyWeb/Done/Person/memory/home.html) （各种transform乱入,不过我喜欢）
 
     负责内容：页面设计、美工、敲码
     
-[仿知乎背景效果](https://github.com/an55555/MyWeb/blob/master/Done/Person/images/start.gif?raw=true)
+![仿知乎背景效果](https://github.com/an55555/MyWeb/blob/master/Done/Person/images/start.gif?raw=true)
     
 2. [仿知乎登录面背景效果](https://an55555.github.io/MyWeb/Done/Person//other/start_relation.html) （Canvas+Js）
 
