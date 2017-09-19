@@ -20,5 +20,5 @@
 
      之所以神奇，是因为当初找工作的时候，好几个公司就喜欢我这个....
      
-4. [在乐方做的所有作品](https://github.com/an55555/MyWeb/tree/master/Done/Person/memory/%E6%88%91%E5%81%9A%E7%9A%84%E4%BD%9C%E5%93%81)
+4. [在乐方做的所有作品](https://github.com/an55555/MyWeb/tree/master/Done/Person/memory/%E6%88%91%E5%81%9A%E7%9A%84%E4%BD%9C%E5%93%81) (可略过)
 
